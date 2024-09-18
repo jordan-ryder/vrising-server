@@ -39,10 +39,10 @@ wine ${VRISING_PATH}/VRisingServer.exe \
     -bindAddress "${BIND_ADDRESS}" \
     -hideIpAddress "${HIDE_IP}" \
     -lowerFPSWhenEmpty "${LOWER_FPS_EMPTY}" \
-    -password "${SERVER_PASSWORD}" \
     -secure "${SECURE}" \
     -listOnEOS "${EOS_LIST}" \
     -listOnSteam "${STEAM_LIST}" \
-    -preset "${GAME_PRESET}" \
-    -difficultyPreset "${DIFFICULTY}" \
-    -saveName "${SAVE_NAME}"
+    -saveName "${SAVE_NAME}" \
+    $( [ -n "$GAME_PRESET" ] && echo "-preset ${GAME_PRESET}" ) \
+    $( [ -n "$DIFFICULTY" ] && echo "-difficultyPreset ${DIFFICULTY}" ) \
+    $( [ -n "$SERVER_PASSWORD" ] && echo "-password ${SERVER_PASSWORD}" ) \

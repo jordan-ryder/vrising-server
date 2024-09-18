@@ -12,7 +12,7 @@ Persistent storage should be mounted to /opt/steam/vrising/save-data
 | Name | Description | Default | Required |
 | ---- | ----------- | ------- | -------- |
 | SERVER_NAME | Name for the Server | None | True |
-| SERVER_PASSWORD | Password for the server | None | True |
+| SERVER_PASSWORD | Password for the server | None | False |
 | GAME_PORT | Port for server connections | 27015 | False |
 | QUERY_PORT | Port for steam query of server | 27016 | False |
 | DESCRIPTION | Description for server | None | False |
@@ -99,6 +99,9 @@ I've built a Helm chart and have included it in the `helm` directory within this
 
 Q: I can't connect to or find my server! <br>
 A: You have a networking issue or misconfiguration, this is not a fault with the image.
+
+Q: Why my ServerGameSettings.json doesn't work? <br>
+A: You have to set GAME_PRESET env to empty, same with DIFFICULTY env if u want to change difficulty.
 
 Q: Why does the image always download the game files? <br>
 A: The game files are not persisted, only the save game data. The image will check if the data is present when started, if it's not there it will download it, if it needs updated it will download it.
