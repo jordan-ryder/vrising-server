@@ -36,7 +36,7 @@ podman run \
   --publish 27015:27015/udp \
   --publish 27016:27016/udp \
   --env-file vars.env \
-  docker.io/sknnr/vrising-dedicated-server:latest
+  docker.io/ziferrot/vrising-server:latest
 ```
 
 ### Docker
@@ -49,7 +49,7 @@ docker run \
   --publish 27015:27015/udp \
   --publish 27016:27016/udp \
   --env-file vars.env \
-  sknnr/vrising-dedicated-server:latest
+  ziferrot/vrising-server:latest
 ```
 
 ### Docker Compose
@@ -71,7 +71,7 @@ compose.yaml:
 ```yaml
 services:
   vrising:
-    image: sknnr/vrising-dedicated-server:latest
+    image: ziferrot/vrising-server
     ports:
       - "27015:27015/udp"
       - "27016:27016/udp"
