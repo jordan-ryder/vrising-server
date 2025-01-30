@@ -43,6 +43,4 @@ wine ${VRISING_PATH}/VRisingServer.exe \
     -listOnEOS "${EOS_LIST}" \
     -listOnSteam "${STEAM_LIST}" \
     -saveName "${SAVE_NAME}" \
-    $( [ -n "$GAME_PRESET" ] && echo "-preset ${GAME_PRESET}" ) \
-    $( [ -n "$DIFFICULTY" ] && echo "-difficultyPreset ${DIFFICULTY}" ) \
     $( [ -n "$SERVER_PASSWORD" ] && echo "-password ${SERVER_PASSWORD}" ) \
