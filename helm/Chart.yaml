@@ -1,9 +1,0 @@
-apiVersion: v1
-name: vrising-dedicated-server
-version: 1.0.0
-description: VRising dedicated server.
-keywords:
-- game
-- server
-- vrising
-home: https://playvrising.com/

@@ -26,18 +26,6 @@ Persistent storage should be mounted to /opt/steam/vrising/save-data
 | DIFFICULTY | Load a GameDifficulty preset. | Difficulty_Normal | False |
 | SAVE_NAME | Name of save file/directory. Must be a valid directory name. | vrising_world | False |
 
-### Podman
-
-```bash
-podman run \
-  --detach \
-  --name vrising-server \
-  --mount type=volume,source=vrising-persistent-data,target=/opt/steam/vrising/save-data \
-  --publish 27015:27015/udp \
-  --publish 27016:27016/udp \
-  --env-file vars.env \
-  docker.io/ziferrot/vrising-server:latest
-```
 
 ### Docker
 
@@ -49,7 +37,7 @@ docker run \
   --publish 27015:27015/udp \
   --publish 27016:27016/udp \
   --env-file vars.env \
-  ziferrot/vrising-server:latest
+  jordan-ryder/vrising:latest
 ```
 
 ### Docker Compose
@@ -71,7 +59,7 @@ compose.yaml:
 ```yaml
 services:
   vrising:
-    image: ziferrot/vrising-server
+    image: jordan-ryder/vrising
     ports:
       - "27015:27015/udp"
       - "27016:27016/udp"
