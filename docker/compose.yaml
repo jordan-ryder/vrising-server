@@ -16,8 +16,6 @@ services:
       - SECURE=true
       - EOS_LIST=true
       - STEAM_LIST=false
-      - GAME_PRESET=StandardPvP
-      - DIFFICULTY=Difficulty_Normal
       - SAVE_NAME=vrising_world
     volumes:
       - vrising-persistent-data:/opt/steam/vrising/save-data
